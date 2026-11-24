@@ -1,0 +1,193 @@
+# Corpus de entrenamiento de KHAOS: cómo pregunta la gente cada tipo de cosa.
+#
+# Formato:
+#   ## nombre_de_intencion       empieza una intención
+#   {a|b|c}                      una de esas opciones (se generan todas las combinaciones)
+#   [x]                          opcional (con o sin "x")
+#   @NOMBRE = ...                define un trozo reutilizable; luego se usa escribiendo @NOMBRE
+#   <mision> <npc> <zona>        el nombre de una misión, un personaje o una zona
+#
+# Cuantas más formas distintas de preguntar haya aquí, mejor entiende KHAOS.
+# Añade frases reales que la gente escriba (sobre todo las que KHAOS no entendió) y vuelve
+# a ejecutar: python3 herramientas/entrenar_intenciones.py
+
+@PRE = {|oye |che |ey |bro |hola |disculpa |perdona |perdon |una pregunta |pregunta |khaos |amigo |man |tio |}
+@DIME = {|dime |decime |me dices |me decis |sabes |sabés |sabes {decirme|me decir} |me podes decir |me puedes decir |necesito saber |quiero saber |alguien sabe |tenes idea |tienes idea |}
+@POR = {| por favor| porfa| pls| xfa|}
+@MIS = {la mision|la misión|la quest|esta mision|esta misión|esta quest|esa mision|esa misión|esta|esa}
+
+## pasos
+{tengo|estoy haciendo|estoy con|me toco|me tocó|agarre|pille} <mision> y no {se|sé|tengo idea de} {que hacer|qué hacer|que hay que hacer|como hacerla|cómo hacerla}
+{no entiendo|no pillo|no cacho} {para nada|nada de|ni papa de|} {<mision>|@MIS} [para nada]
+{la mision|la misión} <mision> no la {entiendo|pillo|cacho} [para nada|nada]
+me {explicas|explicás|explicarias|podes explicar|puedes explicar} {un poco|bien|rapido|rápido|} {<mision>|@MIS}
+@PRE@DIME{como|cómo} {se hace|hago|completo|termino|paso|saco|resuelvo|me paso|hago para completar|carajo hago|demonios hago} <mision>@POR
+@PRE{que|qué} {hay que|tengo que|debo|se tiene que|tendria que} hacer {en|para|con} <mision>@POR
+@PRE{ayuda|ayudame|ayúdame|help|socorro|una mano|dame una mano} {con|en|para} <mision>@POR
+@PRE{no entiendo|no se hacer|no sé hacer|no puedo hacer|no puedo completar|estoy trabado en|estoy atascado en|me trabé en|me quedé atascado en|me atasque en|estoy bloqueado en|no logro hacer|no consigo hacer|no se como hacer|no sé cómo hacer} <mision>
+{explicame|explícame|explica|explicame como se hace|contame|cuentame} <mision>
+{guia|guía|tutorial|walkthrough|pasos} {de|para|sobre} <mision>
+{objetivos|pasos|que pide|lo que pide|requerimientos de objetivos} de <mision>
+<mision>
+<mision>@POR
+{info|informacion|información|datos|detalles|todo} {de|sobre|acerca de} <mision>
+@PRE{que|qué} {hago|tengo que hacer|hay que hacer|se hace|me piden|piden} {en|con|para} @MIS
+@PRE{como|cómo} {se hace|hago|completo|termino|resuelvo|paso} @MIS
+{de que|de qué} {va|trata|se trata} {<mision>|@MIS}
+{como|cómo} {mato|consigo|junto|recojo|encuentro|uso|activo} {lo que pide|los objetos de|las cosas de|lo de} <mision>
+{que|qué} {pide|me pide|necesita} <mision>
+{no entiendo|no se que hacer en|no sé qué hacer en|estoy perdido en|ni idea de} @MIS
+{explicame|explícame|ayudame con|ayúdame con} @MIS
+{como|cómo} {se completa|se termina|funciona} <mision>
+<mision> {como se hace|ayuda|no la entiendo|que hago|que hay que hacer}
+
+## donde
+{estoy con|estoy haciendo|tengo|hago} <mision> {pero|y} no {se|sé} {a donde|adonde|donde|para donde|hacia donde} {ir|tengo que ir|queda|es}
+{me perdi|me perdí|estoy perdido} {donde es|donde queda|a donde voy} {@MIS|<mision>|}
+@PRE@DIME{donde|dónde|en que parte|en qué parte|por donde|en que lugar|a donde|adonde|en que sitio} {se hace|queda|esta|está|tengo que ir para|voy para|se completa|hago|es|se encuentra} <mision>@POR
+{coordenadas|ubicacion|ubicación|localizacion|localización|posicion|posición|lugar|sitio|mapa} {de|para|del objetivo de} <mision>
+{como|cómo} {llego|voy|se llega} {a|para|hasta} <mision>
+@PRE{a donde|adonde|donde|para donde|hacia donde} {tengo que ir|voy|hay que ir|debo ir|me dirijo} [ahora] [para @MIS]
+@PRE{donde|dónde} {estan|están|encuentro|consigo|busco|hay|salen|aparecen} {los objetivos|los bichos|los monstruos|los enemigos|los objetos|las cosas|lo que pide|los mobs} {de|para} {<mision>|@MIS}
+{en que zona|en qué zona|que zona|en que mapa|que mapa|en que region} {es|esta|está|queda|se hace} {<mision>|@MIS}
+{marcame|señalame|muestrame|muéstrame|ponme|dame} {en el mapa|las coordenadas de|donde es|el sitio de} {<mision>|@MIS}
+@PRE{donde|dónde} {queda|es|se hace|esta|está} {esto|eso|@MIS|el objetivo|lo que me piden}
+@PRE{donde|dónde} {se hace|queda} @MIS
+{coordenadas|coords|ubicacion|donde es} [porfa]
+{no encuentro|no veo|no hallo} {donde es|el sitio de|el lugar de} {<mision>|@MIS}
+{por donde|hacia donde|para que lado} {queda|es|voy} {<mision>|@MIS}
+<mision> {donde es|donde queda|coordenadas|ubicacion|donde se hace}
+
+## inicio
+{como hago|que hago|qué hago} para que me {den|ofrezcan|salga|aparezca} <mision>
+{quien|quién} {era|es} el que {da|daba|tiene|tenia|ofrece} <mision>
+{de donde|de dónde} {saco|consigo|cojo|pillo} {la mision|la quest|} <mision>
+@PRE@DIME{quien|quién|que pnj|qué pnj|que personaje|qué personaje|cual pnj|cual personaje} {da|me da|te da|ofrece|tiene|entrega} <mision>@POR
+@PRE@DIME{donde|dónde} {empieza|comienza|se coge|se pilla|se agarra|se consigue|se acepta|se obtiene|consigo|cojo|pillo|agarro|acepto|saco|se saca|arranca|se activa} <mision>@POR
+{como|cómo} {empiezo|comienzo|consigo|obtengo|activo|inicio|arranco|pillo|agarro|cojo} {la mision|la misión|la quest|} <mision>
+@PRE{quien me la da|quien la da|quién me la da|donde la consigo|dónde la consigo|donde la pillo|donde la agarro|donde la cojo|como la consigo|cómo la consigo|donde empieza|dónde empieza|donde se coge|donde se pilla|quien la ofrece|donde la acepto|como la empiezo|donde arranca|como la pillo}
+{inicio|comienzo|origen|principio|arranque} de <mision>
+@PRE{donde|dónde} se {empieza|inicia|pilla|coge|agarra|consigue} {la cadena de|la mision de|la historia de|} <mision>
+{quien|quién} {da|ofrece} @MIS
+{que npc|qué pnj|que personaje} {da|ofrece|tiene} @MIS
+{donde|dónde} {consigo|pillo|cojo|agarro|acepto|empiezo} @MIS
+<mision> {quien la da|donde empieza|donde se coge|donde la consigo|como la consigo}
+{quiero hacer|quiero empezar|quiero conseguir} <mision> {donde la cojo|donde empieza|quien la da|como la consigo|donde la consigo}
+
+## entrega
+@PRE{donde|dónde|a quien|a quién|con quien|con quién} {entrego|se entrega|devuelvo|doy|termino|completo|cobro|reporto|tengo que entregar|hay que entregar|la entrego|la devuelvo} <mision>@POR
+{ya termine|ya terminé|ya hice|ya complete|ya completé|termine|terminé|acabe|acabé|ya acabe} <mision> {y ahora que|y ahora|donde la entrego|a quien se la doy|y ahora donde voy|a quien se la entrego|donde la devuelvo}
+{quien|quién} {recibe|recoge|acepta} <mision>
+@PRE{a quien se la doy|donde la entrego|dónde la entrego|a quien la entrego|a quién la entrego|donde la devuelvo|con quien hablo para entregarla|donde la cobro|a quien se la entrego|donde se entrega|a quien se entrega|donde la reporto|a quien le hablo ahora|con quien hablo ahora}@POR
+{ya la termine|ya la terminé|ya la hice|la complete|la completé|ya esta|ya está|ya la acabe|ya tengo todo} {y ahora|y ahora que hago|donde voy|a quien se la doy|donde la entrego|que hago}
+{entregar|entrega de|entrego|devolver} <mision>
+{donde|dónde} {entrego|devuelvo|reporto} @MIS
+{a quien|a quién} {entrego|le doy|devuelvo|le hablo para entregar} @MIS
+{quien|quién} {recibe|recoge} @MIS
+<mision> {donde se entrega|a quien se entrega|donde la entrego|a quien se la doy}
+{tengo|ya tengo} {todo|los objetos|todo lo que pide} {de|para} {<mision>|@MIS} {y ahora|donde la entrego|a quien}
+
+## antes
+{que|qué} me falta para que {me salga|me aparezca|me den|me ofrezcan} {<mision>|@MIS}
+{quiero hacer|quiero empezar} <mision> pero no {me aparece|me sale|la veo|la encuentro}
+@PRE{que|qué} {necesito|me falta hacer antes|requisitos hay|hace falta|tengo que hacer antes|debo hacer antes|hay que hacer antes} {para|de} <mision>@POR
+@PRE{por que|por qué|porque} no {me sale|me aparece|veo|tengo|puedo coger|puedo aceptar|encuentro|puedo hacer|me la dan|me dan} <mision>
+{requisitos|requerimientos|prerequisitos|prerrequisitos|condiciones} {de|para} <mision>
+{que|qué|cual|cuál} {mision|misión|quest} {va antes de|viene antes de|es anterior a|desbloquea|abre|habilita|necesito para} <mision>
+@PRE{no me aparece|no me sale|no la encuentro|no la veo|no me la dan|no aparece|no sale} {la mision|esta mision|la siguiente|la quest|nada|}
+{como|cómo} {desbloqueo|habilito|hago aparecer|consigo que salga} <mision>
+{antes de|previo a} <mision> {que hago|que hay que hacer|que va|que mision va}
+{de que cadena es|en que cadena esta|que cadena es|de que historia es} <mision>
+@PRE{por que|por qué|porque} no {me sale|me aparece|la veo|la tengo|puedo cogerla|puedo aceptarla} @MIS
+{que|qué} {necesito|me falta|tengo que hacer} {antes de|para conseguir|para desbloquear} @MIS
+{requisitos|que necesito} {de|para} @MIS
+<mision> {no me aparece|no me sale|requisitos|que necesito|que va antes}
+
+## despues
+@PRE{que|qué} {sigue|viene|hago|toca|va} {despues de|después de|luego de|tras|al terminar} <mision>
+{siguiente|proxima|próxima} {mision|misión|parte|quest} {de|despues de|después de|tras} <mision>
+@PRE{y despues|y después|y luego|y ahora que sigue|que sigue|qué sigue|cual es la siguiente|cuál es la siguiente|cual sigue|que viene ahora|que viene despues|como sigue|sigue algo|hay mas|y ahora cual}
+{continuacion|continuación|segunda parte|parte siguiente} de <mision>
+{termine|terminé|ya hice|ya complete|ya entregue|ya entregué} <mision> {que sigue|cual es la siguiente|que viene despues|y ahora que hago|y despues}
+{como|cómo} sigue la {historia|cadena|campaña} {de|despues de} <mision>
+{que|qué} {sigue|viene} {despues de|después de|tras} @MIS
+{cual|cuál} es la {siguiente|proxima} {despues de|de} @MIS
+<mision> {que sigue|y despues|cual es la siguiente|que viene despues}
+{ya la entregue|ya la entregué|ya la termine|la acabe} {que sigue|y ahora cual|cual es la siguiente|que viene}
+
+## nivel
+@PRE{que|qué|a que|a qué|de que} nivel {es|tiene|necesito para|hace falta para|piden para|hay que tener para|se requiere para} <mision>
+{nivel|lvl} {de|para|minimo de|minimo para} <mision>
+{a que nivel|con que nivel|desde que nivel|a partir de que nivel} {puedo hacer|se hace|me dejan hacer|sale|aparece} <mision>
+{soy nivel|tengo nivel|estoy en nivel} {98|100|102|105|108|110} {puedo hacer|me da para|alcanza para} <mision>
+{que|qué} nivel {es|tiene|necesito para} @MIS
+{a que nivel|con que nivel} {sale|se hace|aparece} @MIS
+<mision> {que nivel|nivel|a que nivel}
+
+## progreso
+ya {cumpli|cumplí|complete|completé|hice} todo {de|en|para} {<mision>|@MIS} [o no|o me falta algo|o que]
+{me falta|falta} {mucho|poco|algo} para {terminar|acabar|completar} [@MIS|<mision>]
+@PRE{que|qué|cuanto|cuánto} me {falta|queda} [para terminar|para acabar|para completar] [la mision|esta mision|de la mision|de esta]
+@PRE{como|cómo} voy [con la mision|con esta|con la quest]
+{que objetivos|cuales objetivos|que partes|que cosas} me {faltan|quedan}
+{cuanto|cuántos|cuantas} {bichos|objetos|monstruos|cosas|enemigos} me {faltan|quedan}
+{ya la termine|ya complete|ya la tengo} {o no|o me falta algo|o que}
+{que|qué|cuanto|cuánto} me {falta|queda} {de|en|para} <mision>
+{como|cómo} voy con <mision>
+{progreso|avance|estado} de <mision>
+{me falta algo|falta algo|esta completa|está completa} [de|en] <mision>
+{que|qué} me {falta|queda} {de|para} @MIS
+{progreso|estado} de @MIS
+
+## mis_misiones
+@PRE{que|qué|cuales|cuáles} misiones {tengo|llevo|tengo activas|tengo pendientes|me quedan|tengo en el registro}
+{mis misiones|mi registro|registro de misiones|lista de misiones|misiones activas|mis quests}
+@PRE{que hago|qué hago|que puedo hacer|qué puedo hacer|que me recomiendas|qué me recomiendas|que toca|qué toca} {ahora|hoy|ahora mismo|ya}
+{que|qué} {mision|misión} {hago primero|me conviene hacer|es mas importante|deberia hacer}
+@PRE{estoy perdido|no se que hacer|no sé qué hacer|me aburro|que hago|qué hago} [que hago|ayuda|ahora]
+{muestrame|muéstrame|enseñame|enséñame|lista|listame|dime} mis misiones
+{que|qué} tengo {pendiente|por hacer|para hacer}
+{por cual empiezo|cual hago primero|que hago primero}
+
+## zona
+@PRE{que|qué} misiones hay en <zona>
+{misiones|quests|historia} {de|en} <zona>
+{que puedo hacer|que hago|que hay para hacer|que hay que hacer} en <zona>
+{cuantas misiones|cuántas misiones} {hay|tiene|hay en} <zona>
+{historia|campaña|argumento} de <zona>
+{donde empiezo|como empiezo|por donde empiezo|por donde arranco} {en|la zona de|} <zona>
+{que|qué} misiones hay {aqui|en esta zona|en este mapa|por aqui|cerca}
+{que|qué} {puedo hacer|hago|hay para hacer} {aqui|en esta zona|por aqui}
+{misiones|quests} {de|en} {esta zona|aqui|este mapa}
+{voy a|estoy en|llegue a|acabo de llegar a} <zona> {que hago|que misiones hay|por donde empiezo}
+
+## npc_donde
+@PRE@DIME{donde|dónde} {esta|está|anda|encuentro|queda|se encuentra|puedo encontrar|vive|para|se pone} <npc>@POR
+{ubicacion|ubicación|coordenadas|coords|posicion|posición|sitio} de <npc>
+{busco a|estoy buscando a|necesito encontrar a|no encuentro a|no veo a|donde carajo esta} <npc>
+{quien es|quién es} <npc>
+{como|cómo} {llego a|encuentro a|voy a donde esta} <npc>
+<npc> {donde esta|donde anda|coordenadas|ubicacion}
+
+## guia
+{que|qué} tengo que hacer para {poder volar|volar|ir a argus|llegar a argus|desbloquear el vuelo|tener misiones del mundo}
+{que|qué} me falta para {volar|poder volar|ir a argus|desbloquear el vuelo|el pionero}
+@PRE@DIME{como|cómo} {desbloqueo|consigo|saco|obtengo|activo|habilito|empiezo|hago} {el vuelo|volar|las misiones del mundo|el artefacto|mi arma artefacto|argus|la campaña de suramar|la torre del mago|el mundo|la sede de clase|las monturas de clase|las reliquias|pionero|el logro pionero}@POR
+{como|cómo} {se vuela|puedo volar|vuelo|se desbloquea el vuelo} [en legion|en las islas|en las islas abruptas]
+{cuando|cuándo} {puedo volar|desbloqueo las misiones del mundo|llego a argus|se vuela}
+{guia|guía|tutorial|info|informacion} {de|sobre|para} {volar|vuelo|argus|suramar|artefacto|torre del mago|misiones del mundo|pionero|reputacion}
+{requisitos|que necesito|que hace falta} para {volar|ir a argus|la torre del mago|las misiones del mundo|desbloquear el vuelo}
+{que es|qué es|para que sirve} {la torre del mago|el mana antiguo|el pionero|argus|suramar|el artefacto}
+{como|cómo} {subo|consigo|farmeo|gano} {reputacion|reputación|rep} {con|de} {los sinocaso|nightfallen|valarjar|la corte de farondis|las tejesueños|monte alto|las guardianas|la defensa de legion}
+{como|cómo} {llego a|voy a|empiezo} argus
+{puedo volar|se puede volar} [en legion|ya|aqui]
+{volar|vuelo|pionero|argus|suramar|torre del mago|artefacto}
+
+## saludo
+{hola|buenas|holi|hey|que tal|qué tal|buen dia|buenos dias|buenas tardes|buenas noches|saludos|wenas|ola|ey khaos|hola khaos|que onda|que hay|buenas khaos|hello|hi|que pasa|como estas|cómo estás|como andas}
+
+## ayuda
+{ayuda|que puedes hacer|qué puedes hacer|que sabes hacer|qué sabes hacer|como funcionas|cómo funcionas|como te uso|cómo te uso|para que sirves|para qué sirves|comandos|que preguntas puedo hacer|help|que sabes|instrucciones|como funciona esto|que haces|quien eres|quién eres|que eres|que podes hacer|qué podés hacer|que sabes hacer vos|que podes|como te uso|en que me ayudas|en que me podes ayudar|en que me puedes ayudar|que tipo de preguntas respondes|para que estas|para qué estás|para que existes}
+
+## gracias
+{gracias|muchas gracias|grax|thx|genial|perfecto|crack|sos un crack|eres un crack|vale gracias|ok gracias|dale gracias|joya|excelente|buenisimo|de una|mil gracias|te pasaste|eres el mejor|sos el mejor|ok|vale|dale|listo|entendido}

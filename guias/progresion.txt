@@ -1,0 +1,88 @@
+# Guías de ejemplo para KHAOS (resúmenes propios, Legion 7.3.5)
+# Formato:
+#   ### id: identificador_unico
+#   titulo: Título que verá el jugador
+#   claves: palabras clave separadas por comas (sinónimos, nombres en inglés...)
+#   misiones: nombres de misiones relacionadas, separados por |  (para detectarlas en tu registro)
+#   ids: (opcional) IDs de misión de WoW separados por comas; detección más fiable que el nombre
+#   ---
+#   Texto de la guía. Cada línea que empiece por "-" se muestra como un paso.
+# Las líneas que empiezan por # son comentarios.
+
+### id: vuelo_parte1
+titulo: Volar en las Islas Abruptas (Pionero, parte uno)
+claves: volar, vuelo, pionero, pathfinder, montura voladora, flying
+misiones:
+---
+Para volar en Legion necesitas el logro "Pionero de las Islas Abruptas" en sus dos partes. La parte uno pide:
+- Explorar las Islas Abruptas: descubrir todas las zonas del mapa.
+- Diplomático de las Islas Abruptas: llegar a Reverenciado con la Corte de Farondis, las Tejesueños, la Tribu de Monte Alto, los Valarjar y los Sinocaso (Nightfallen).
+- Maestro cultural de Legion: terminar las historias principales de cada zona.
+- La variedad es la sal de la vida: completar 100 misiones del mundo distintas.
+Consejo: haz las misiones del mundo de emisario cada día; dan mucha reputación.
+
+### id: vuelo_parte2
+titulo: Volar en las Islas Abruptas (Pionero, parte dos)
+claves: volar, vuelo, pionero, parte dos, costa abrupta, flying
+misiones:
+---
+La parte dos (parche 7.2) desbloquea el vuelo al completarla. Pide:
+- Haber completado la parte uno.
+- Explorar la Costa Abrupta.
+- Comandante de la Defensa de Legión: llegar a Reverenciado con los Ejércitos de la Defensa de Legión (Armies of Legionfall).
+- Asaltando la tumba: completar la campaña de la Costa Abrupta hasta abrir la Tumba de Sargeras.
+Al terminarla, se aplica a todos tus personajes de la cuenta.
+
+### id: misiones_mundo
+titulo: Desbloquear las misiones del mundo
+claves: misiones del mundo, world quests, emisarios, mapa, 110, uniendo las islas
+misiones: Uniendo las islas
+---
+Las misiones del mundo se desbloquean a nivel 110:
+- Llega a nivel 110.
+- Consigue Honorable con las cinco facciones principales (Corte de Farondis, Tejesueños, Tribu de Monte Alto, Valarjar y Guardianas).
+- Habla con Khadgar en Dalaran y completa "Uniendo las islas".
+Después verás las misiones del mundo en el mapa de las Islas Abruptas.
+
+### id: arma_artefacto
+titulo: Conseguir tu arma artefacto
+claves: artefacto, arma, artifact, sede de clase, class hall, primera arma
+misiones:
+---
+El arma artefacto llega muy pronto en la historia:
+- Tras la introducción de la Costa Abrupta, ve a Dalaran (sobre las Islas Abruptas).
+- Sigue la cadena de tu sede de clase que te da el líder de tu clase.
+- La campaña te lleva a un escenario donde recuperas el arma de tu especialización.
+- Puedes conseguir las armas de las otras especializaciones más tarde desde la sede de clase.
+
+### id: suramar_nocturnidad
+titulo: Campaña de Suramar (Sinocaso)
+claves: suramar, nightfallen, sinocaso, nocheterna, mana antiguo, ancient mana, thalyssra, insurreccion
+misiones:
+---
+La historia de Suramar avanza por reputación con los Sinocaso:
+- Empieza con la primera ministra Thalyssra en Shal'Aran.
+- Muchos capítulos piden un nivel de reputación con los Sinocaso; si se te bloquea, haz misiones del mundo de Suramar.
+- Guarda Maná antiguo: lo usas para abrir portales y mejorar la capacidad de maná de Shal'Aran.
+- En 7.1 llega la parte "Insurrección", que se desbloquea al seguir la campaña principal.
+
+### id: argus_inicio
+titulo: Empezar Argus
+claves: argus, krokuun, mac'aree, macaree, velen, nave, vindicaar, asalto
+misiones:
+---
+Para empezar la historia de Argus (7.3):
+- Necesitas nivel 110 y haber avanzado la campaña de la Costa Abrupta.
+- Busca en Dalaran la misión que te envía a reunirte con el profeta Velen.
+- Desde la Vindicaar viajarás a Krokuun y, más tarde, a Mac'Aree.
+- La campaña es semanal en partes; si no aparece el siguiente capítulo, revisa tu sede de clase y vuelve más tarde.
+
+### id: torre_mago
+titulo: Torre del Mago (desafíos de artefacto)
+claves: torre del mago, mage tower, desafio, apariencia, costa abrupta
+misiones:
+---
+La Torre del Mago está en la Costa Abrupta:
+- Solo está activa cuando la comunidad la ha construido con aportaciones de recursos de guerra.
+- Dentro hay un desafío en solitario por especialización que da una apariencia de artefacto.
+- Es exigente: lleva buen equipo, conoce tu clase y prueba varias veces.

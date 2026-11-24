@@ -1,0 +1,20 @@
+## Interface: 70300
+## Title: |cffff3030KHAOS|r
+## Notes: Guía offline de misiones de Legion. Escribe /khaos <pregunta>
+## Author: puyi
+## Version: 0.7.0
+## SavedVariables: KhaosDB
+
+Datos.lua
+Misiones_esES.lua
+Misiones_esMX.lua
+Misiones_enUS.lua
+Puntos.lua
+Nucleo.lua
+Modelo.lua
+Lenguaje.lua
+Aprender.lua
+Calibrar.lua
+Misiones.lua
+Ventana.lua
+Entender.lua

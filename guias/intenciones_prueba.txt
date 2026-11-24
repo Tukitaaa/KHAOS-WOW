@@ -1,0 +1,168 @@
+# Preguntas de prueba escritas a mano (NO se usan para entrenar). Sirven para medir
+# cuánto acierta KHAOS con formas de preguntar que nunca vio. Formato: intencion | frase
+pasos | no tengo ni idea de como hacer <mision>
+pasos | alguien me explica <mision>?
+pasos | q hay q hacer en <mision>
+pasos | como se completa esta mierda de mision
+pasos | me ayudas con <mision> que no la entiendo
+pasos | <mision> ayudaaa
+pasos | que me piden en la mision
+pasos | como hago esta quest
+pasos | estoy trabada en <mision>
+pasos | necesito ayuda con <mision>
+pasos | de que va esta mision
+pasos | explicame que hacer en <mision>
+pasos | como mato lo que me piden en <mision>
+pasos | cómo carajo se hace <mision>
+donde | donde queda eso
+donde | adonde tengo q ir
+donde | en que zona es <mision>
+donde | dnd es <mision>
+donde | dame las coords de <mision>
+donde | por donde tengo que ir para hacer esta
+donde | donde estan los bichos de la mision
+donde | no encuentro el lugar de <mision>
+donde | donde se hace esta quest?
+donde | a donde voy ahora
+donde | donde salen los objetos que pide
+donde | ubicacion de <mision> porfa
+donde | hacia donde queda esta
+donde | <mision> donde queda
+inicio | quien me da <mision>
+inicio | donde se pilla <mision>
+inicio | como consigo la mision <mision>
+inicio | k pnj da <mision>
+inicio | donde arranca <mision>
+inicio | donde la agarro
+inicio | quien te da esta mision
+inicio | donde empiesa <mision>
+inicio | como empiezo <mision>
+inicio | quiero hacer <mision> donde la consigo
+inicio | donde puedo coger <mision>
+inicio | que personaje ofrece <mision>
+entrega | a quien se la entrego
+entrega | ya termine <mision> y ahora?
+entrega | donde la entrego
+entrega | con quien hablo para entregar <mision>
+entrega | ya tengo todo y ahora a quien se lo doy
+entrega | donde se entrega <mision>
+entrega | a quien le doy esta
+entrega | ya la complete donde voy
+entrega | quien recibe <mision>
+entrega | acabe <mision> a quien se la doy
+antes | por que no me aparece <mision>
+antes | xq no me sale <mision>
+antes | que necesito para hacer <mision>
+antes | que tengo que hacer antes de <mision>
+antes | no me sale la siguiente
+antes | requisitos de <mision>
+antes | que mision desbloquea <mision>
+antes | no me aparece la quest
+antes | que va antes de <mision>
+antes | no me la dan
+despues | que sigue despues de <mision>
+despues | y ahora que sigue
+despues | cual es la siguiente
+despues | termine <mision> que viene despues
+despues | y despues?
+despues | siguiente mision de <mision>
+despues | como sigue la historia despues de <mision>
+despues | ya la entregue y ahora cual
+despues | hay mas despues de esta?
+nivel | que nivel necesito para <mision>
+nivel | a que lvl puedo hacer <mision>
+nivel | <mision> de que nivel es
+nivel | soy 105 puedo hacer <mision>
+nivel | que nivel tiene esta
+progreso | que me falta
+progreso | cuanto me queda de la mision
+progreso | como voy con <mision>
+progreso | cuantos bichos me faltan
+progreso | que me queda para terminar esta
+progreso | ya la termine o me falta algo
+progreso | que objetivos me quedan
+mis_misiones | que misiones tengo
+mis_misiones | que hago ahora
+mis_misiones | estoy perdido que hago
+mis_misiones | mostrame mis quests
+mis_misiones | que tengo pendiente
+mis_misiones | que me recomendas hacer
+mis_misiones | por cual empiezo
+zona | que misiones hay en <zona>
+zona | que hago en <zona>
+zona | misiones de <zona>
+zona | acabo de llegar a <zona> que hago
+zona | que hay para hacer por aca
+zona | que misiones hay en esta zona
+zona | por donde empiezo en <zona>
+npc_donde | donde esta <npc>
+npc_donde | dnd anda <npc>
+npc_donde | no encuentro a <npc>
+npc_donde | coordenadas de <npc>
+npc_donde | donde puedo encontrar a <npc>
+npc_donde | quien es <npc>
+guia | como desbloqueo volar
+guia | como consigo el vuelo en legion
+guia | cuando puedo volar
+guia | como llego a argus
+guia | como subo rep con los valarjar
+guia | que es la torre del mago
+guia | requisitos para volar
+guia | como desbloqueo las misiones del mundo
+guia | se puede volar en legion?
+guia | volar
+saludo | holaa
+saludo | buenas khaos
+saludo | que onda
+saludo | hola como andas
+ayuda | que podes hacer
+ayuda | como funciona esto
+ayuda | que preguntas te puedo hacer
+ayuda | quien sos
+gracias | gracias crack
+gracias | muchas gracias!!
+gracias | joya
+gracias | dale perfecto
+# --- más difíciles: frases largas, desordenadas o muy coloquiales
+pasos | buenas, estoy haciendo <mision> y no tengo idea de que hay que hacer, me ayudas?
+pasos | la mision <mision> no la entiendo para nada
+pasos | che y esta como se hace
+pasos | tengo <mision> y no se que hacer
+pasos | me explicas un poco <mision>
+donde | estoy con <mision> pero no se a donde ir
+donde | para que lado tengo que ir
+donde | en que parte del mapa esta lo de <mision>
+donde | me perdi, donde es la mision
+donde | donde mierda esta lo que me piden
+inicio | quiero empezar <mision> pero no se quien me la da
+inicio | como hago para que me den <mision>
+inicio | de donde saco la mision <mision>
+inicio | quien era el que daba <mision>
+entrega | ya junte todo lo de <mision>, a quien se lo llevo?
+entrega | listo la termine, ahora donde voy a entregarla
+entrega | a quien tengo que ir a ver para entregar esta
+antes | quiero hacer <mision> pero no me aparece
+antes | que me falta para que me salga <mision>
+antes | no puedo aceptar <mision> por que sera
+despues | ya entregue <mision>, y ahora que hago
+despues | despues de esta que mision va
+despues | la siguiente cual era
+nivel | me deja hacer <mision> siendo nivel 100?
+nivel | cuanto nivel pide <mision>
+progreso | me falta mucho para terminar?
+progreso | cuanto le falta a esta
+progreso | ya cumpli todo de <mision>?
+mis_misiones | no se que hacer ahora mismo
+mis_misiones | que misiones tengo empezadas
+mis_misiones | que deberia hacer
+zona | estoy en <zona>, que misiones hay
+zona | que puedo hacer en esta zona
+npc_donde | sabes donde para <npc>?
+npc_donde | busco a <npc> y no lo encuentro
+guia | como hago para volar
+guia | que tengo que hacer para poder volar
+guia | como se llega a argus
+guia | que me falta para volar
+guia | como consigo reputacion con los sinocaso
+ayuda | que cosas sabes hacer
+ayuda | para que estas

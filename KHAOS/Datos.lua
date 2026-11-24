@@ -1,0 +1,68 @@
+-- ARCHIVO GENERADO por herramientas/construir_bd.py. No lo edites a mano:
+-- cambia las guías en la carpeta guias/ y vuelve a ejecutar el script.
+local _, ns = ...
+ns.Guias = {
+  {
+    id = "vuelo_parte1",
+    titulo = "Volar en las Islas Abruptas (Pionero, parte uno)",
+    texto = "Para volar en Legion necesitas el logro \"Pionero de las Islas Abruptas\" en sus dos partes. La parte uno pide:\n- Explorar las Islas Abruptas: descubrir todas las zonas del mapa.\n- Diplomático de las Islas Abruptas: llegar a Reverenciado con la Corte de Farondis, las Tejesueños, la Tribu de Monte Alto, los Valarjar y los Sinocaso (Nightfallen).\n- Maestro cultural de Legion: terminar las historias principales de cada zona.\n- La variedad es la sal de la vida: completar 100 misiones del mundo distintas.\nConsejo: haz las misiones del mundo de emisario cada día; dan mucha reputación.",
+    claves = { "volar", "vuelo", "pionero", "pathfinder", "montura voladora", "flying" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["100"]=1, ["abruptas"]=6, ["alto"]=1, ["cada"]=2, ["completar"]=1, ["consejo"]=1, ["corte"]=1, ["cultural"]=1, ["dan"]=1, ["descubrir"]=1, ["dia"]=1, ["diplomatico"]=1, ["distintas"]=1, ["dos"]=1, ["emisario"]=1, ["explorar"]=1, ["farondis"]=1, ["flying"]=5, ["haz"]=1, ["historias"]=1, ["islas"]=6, ["legion"]=2, ["llegar"]=1, ["logro"]=1, ["maestro"]=1, ["mapa"]=1, ["monte"]=1, ["montura"]=5, ["mucha"]=1, ["mundo"]=2, ["necesitas"]=1, ["nightfallen"]=1, ["parte"]=4, ["partes"]=1, ["pathfinder"]=5, ["pide"]=1, ["pionero"]=9, ["principales"]=1, ["reputacion"]=1, ["reverenciado"]=1, ["sal"]=1, ["sinocaso"]=1, ["tejesuenos"]=1, ["terminar"]=1, ["todas"]=1, ["tribu"]=1, ["valarjar"]=1, ["variedad"]=1, ["vida"]=1, ["voladora"]=5, ["volar"]=9, ["vuelo"]=5, ["zona"]=1, ["zonas"]=1 },
+  },
+  {
+    id = "vuelo_parte2",
+    titulo = "Volar en las Islas Abruptas (Pionero, parte dos)",
+    texto = "La parte dos (parche 7.2) desbloquea el vuelo al completarla. Pide:\n- Haber completado la parte uno.\n- Explorar la Costa Abrupta.\n- Comandante de la Defensa de Legión: llegar a Reverenciado con los Ejércitos de la Defensa de Legión (Armies of Legionfall).\n- Asaltando la tumba: completar la campaña de la Costa Abrupta hasta abrir la Tumba de Sargeras.\nAl terminarla, se aplica a todos tus personajes de la cuenta.",
+    claves = { "volar", "vuelo", "pionero", "parte dos", "costa abrupta", "flying" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["abrir"]=1, ["abrupta"]=7, ["abruptas"]=3, ["aplica"]=1, ["armies"]=1, ["asaltando"]=1, ["campana"]=1, ["comandante"]=1, ["completado"]=1, ["completar"]=1, ["completarla"]=1, ["costa"]=7, ["cuenta"]=1, ["defensa"]=2, ["desbloquea"]=1, ["dos"]=9, ["ejercitos"]=1, ["explorar"]=1, ["flying"]=5, ["haber"]=1, ["hasta"]=1, ["islas"]=3, ["legion"]=2, ["legionfall"]=1, ["llegar"]=1, ["parche"]=1, ["parte"]=10, ["personajes"]=1, ["pide"]=1, ["pionero"]=8, ["reverenciado"]=1, ["sargeras"]=1, ["terminarla"]=1, ["todos"]=1, ["tumba"]=2, ["tus"]=1, ["volar"]=8, ["vuelo"]=6 },
+  },
+  {
+    id = "misiones_mundo",
+    titulo = "Desbloquear las misiones del mundo",
+    texto = "Las misiones del mundo se desbloquean a nivel 110:\n- Llega a nivel 110.\n- Consigue Honorable con las cinco facciones principales (Corte de Farondis, Tejesueños, Tribu de Monte Alto, Valarjar y Guardianas).\n- Habla con Khadgar en Dalaran y completa \"Uniendo las islas\".\nDespués verás las misiones del mundo en el mapa de las Islas Abruptas.",
+    claves = { "misiones del mundo", "world quests", "emisarios", "mapa", "110", "uniendo las islas" },
+    misiones = { "uniendo las islas" },
+    questIDs = {  },
+    indice = { ["110"]=7, ["abruptas"]=1, ["alto"]=1, ["cinco"]=1, ["completa"]=1, ["consigue"]=1, ["corte"]=1, ["dalaran"]=1, ["desbloquean"]=1, ["desbloquear"]=3, ["despues"]=1, ["emisarios"]=5, ["facciones"]=1, ["farondis"]=1, ["guardianas"]=1, ["habla"]=1, ["honorable"]=1, ["islas"]=10, ["khadgar"]=1, ["llega"]=1, ["mapa"]=6, ["monte"]=1, ["mundo"]=10, ["nivel"]=2, ["principales"]=1, ["quests"]=5, ["tejesuenos"]=1, ["tribu"]=1, ["uniendo"]=9, ["valarjar"]=1, ["veras"]=1, ["world"]=5 },
+  },
+  {
+    id = "arma_artefacto",
+    titulo = "Conseguir tu arma artefacto",
+    texto = "El arma artefacto llega muy pronto en la historia:\n- Tras la introducción de la Costa Abrupta, ve a Dalaran (sobre las Islas Abruptas).\n- Sigue la cadena de tu sede de clase que te da el líder de tu clase.\n- La campaña te lleva a un escenario donde recuperas el arma de tu especialización.\n- Puedes conseguir las armas de las otras especializaciones más tarde desde la sede de clase.",
+    claves = { "artefacto", "arma", "artifact", "sede de clase", "class hall", "primera arma" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["abrupta"]=1, ["abruptas"]=1, ["arma"]=15, ["armas"]=1, ["artefacto"]=9, ["artifact"]=5, ["cadena"]=1, ["campana"]=1, ["clase"]=8, ["class"]=5, ["conseguir"]=4, ["costa"]=1, ["dalaran"]=1, ["desde"]=1, ["escenario"]=1, ["especializacion"]=1, ["especializaciones"]=1, ["hall"]=5, ["historia"]=1, ["introduccion"]=1, ["islas"]=1, ["lider"]=1, ["llega"]=1, ["lleva"]=1, ["muy"]=1, ["otras"]=1, ["primera"]=5, ["pronto"]=1, ["puedes"]=1, ["recuperas"]=1, ["sede"]=7, ["sigue"]=1, ["sobre"]=1, ["tarde"]=1, ["tras"]=1 },
+  },
+  {
+    id = "suramar_nocturnidad",
+    titulo = "Campaña de Suramar (Sinocaso)",
+    texto = "La historia de Suramar avanza por reputación con los Sinocaso:\n- Empieza con la primera ministra Thalyssra en Shal'Aran.\n- Muchos capítulos piden un nivel de reputación con los Sinocaso; si se te bloquea, haz misiones del mundo de Suramar.\n- Guarda Maná antiguo: lo usas para abrir portales y mejorar la capacidad de maná de Shal'Aran.\n- En 7.1 llega la parte \"Insurrección\", que se desbloquea al seguir la campaña principal.",
+    claves = { "suramar", "nightfallen", "sinocaso", "nocheterna", "mana antiguo", "ancient mana", "thalyssra", "insurreccion" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["abrir"]=1, ["ancient"]=5, ["antiguo"]=6, ["avanza"]=1, ["bloquea"]=1, ["campana"]=4, ["capacidad"]=1, ["capitulos"]=1, ["desbloquea"]=1, ["empieza"]=1, ["guarda"]=1, ["haz"]=1, ["historia"]=1, ["insurreccion"]=6, ["llega"]=1, ["mana"]=12, ["mejorar"]=1, ["ministra"]=1, ["muchos"]=1, ["mundo"]=1, ["nightfallen"]=5, ["nivel"]=1, ["nocheterna"]=5, ["parte"]=1, ["piden"]=1, ["portales"]=1, ["primera"]=1, ["principal"]=1, ["reputacion"]=2, ["seguir"]=1, ["shal'aran"]=2, ["sinocaso"]=10, ["suramar"]=10, ["thalyssra"]=6, ["usas"]=1 },
+  },
+  {
+    id = "argus_inicio",
+    titulo = "Empezar Argus",
+    texto = "Para empezar la historia de Argus (7.3):\n- Necesitas nivel 110 y haber avanzado la campaña de la Costa Abrupta.\n- Busca en Dalaran la misión que te envía a reunirte con el profeta Velen.\n- Desde la Vindicaar viajarás a Krokuun y, más tarde, a Mac'Aree.\n- La campaña es semanal en partes; si no aparece el siguiente capítulo, revisa tu sede de clase y vuelve más tarde.",
+    claves = { "argus", "krokuun", "mac'aree", "macaree", "velen", "nave", "vindicaar", "asalto" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["110"]=1, ["abrupta"]=1, ["aparece"]=1, ["argus"]=9, ["asalto"]=5, ["avanzado"]=1, ["busca"]=1, ["campana"]=2, ["capitulo"]=1, ["clase"]=1, ["costa"]=1, ["dalaran"]=1, ["desde"]=1, ["empezar"]=4, ["envia"]=1, ["haber"]=1, ["historia"]=1, ["krokuun"]=6, ["mac'aree"]=6, ["macaree"]=5, ["nave"]=5, ["necesitas"]=1, ["nivel"]=1, ["partes"]=1, ["profeta"]=1, ["reunirte"]=1, ["revisa"]=1, ["sede"]=1, ["semanal"]=1, ["siguiente"]=1, ["tarde"]=2, ["velen"]=6, ["viajaras"]=1, ["vindicaar"]=6, ["vuelve"]=1 },
+  },
+  {
+    id = "torre_mago",
+    titulo = "Torre del Mago (desafíos de artefacto)",
+    texto = "La Torre del Mago está en la Costa Abrupta:\n- Solo está activa cuando la comunidad la ha construido con aportaciones de recursos de guerra.\n- Dentro hay un desafío en solitario por especialización que da una apariencia de artefacto.\n- Es exigente: lleva buen equipo, conoce tu clase y prueba varias veces.",
+    claves = { "torre del mago", "mage tower", "desafio", "apariencia", "costa abrupta" },
+    misiones = {  },
+    questIDs = {  },
+    indice = { ["abrupta"]=6, ["activa"]=1, ["apariencia"]=6, ["aportaciones"]=1, ["artefacto"]=4, ["buen"]=1, ["clase"]=1, ["comunidad"]=1, ["conoce"]=1, ["construido"]=1, ["costa"]=6, ["dentro"]=1, ["desafio"]=6, ["desafios"]=3, ["equipo"]=1, ["especializacion"]=1, ["exigente"]=1, ["guerra"]=1, ["lleva"]=1, ["mage"]=5, ["mago"]=9, ["prueba"]=1, ["recursos"]=1, ["solitario"]=1, ["solo"]=1, ["torre"]=9, ["tower"]=5, ["varias"]=1, ["veces"]=1 },
+  },
+}
